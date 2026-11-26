@@ -1,0 +1,7 @@
+interface:
+  display_name: "ToolSoul 器灵AI公众号深度写作"
+  short_description: "ToolSoul 器灵AI公众号文章从素材到草稿的完整写作工作流"
+  default_prompt: "使用 $wechat-article-workflow 帮我从素材策划一篇自然、可信、适合公众号发布的文章。"
+
+policy:
+  allow_implicit_invocation: true

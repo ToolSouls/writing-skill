@@ -1,0 +1,7 @@
+interface:
+  display_name: "ToolSoul 器灵AI公众号排版"
+  short_description: "ToolSoul 器灵AI将 Word、Markdown、PDF 或纯文本排成公众号 HTML"
+  default_prompt: "使用 $gzh-paiban-skill 将我的文章自动排版为可直接复制到微信公众号编辑器的 HTML。"
+
+policy:
+  allow_implicit_invocation: true

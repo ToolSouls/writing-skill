@@ -1,0 +1,22 @@
+{
+  "name": "wechat-article-workflow",
+  "version": "1.0.0",
+  "description": "公众号文章完整工作流：选题→素材→写作→去 AI 味→配图→封面→排版→推送草稿箱。",
+  "author": {
+    "name": "老李读书笔记"
+  },
+  "plugin": "wechat-article-workflow",
+  "displayName": {
+    "zh": "公众号文章工作流",
+    "en": "WeChat Article Workflow"
+  },
+  "displayDescription": {
+    "zh": "公众号文章完整工作流：选题→素材→写作→去 AI 味→配图→封面→排版→推送草稿箱。",
+    "en": "End-to-end WeChat article pipeline from topic to draft push, including illustration and layout."
+  },
+  "keywords": [
+    "公众号",
+    "写作",
+    "排版"
+  ]
+}
