@@ -59,6 +59,16 @@
 | ToolSoul 科技蓝 | AI 工具、教程、产品测评、科技观察 | [预览](./gzh-paiban-skill/assets/theme-toolsoul-tech-preview.html) |
 | 数据简报 | 行业报告、商业分析、数据复盘 | [预览](./gzh-paiban-skill/assets/theme-data-brief-preview.html) |
 
+> GitHub 文件页不会执行仓库内的 HTML，点击 HTML 链接会看到源码。下载后用浏览器打开可查看完整滚动预览；下面提供直接可看的渲染图。
+
+### ToolSoul 科技蓝
+
+![ToolSoul 科技蓝排版效果](./gzh-paiban-skill/assets/theme-toolsoul-tech-preview.png)
+
+### 数据简报
+
+![数据简报排版效果](./gzh-paiban-skill/assets/theme-data-brief-preview.png)
+
 除视觉主题外，排版 Skill 还会识别文章类型，并从教程、观点、清单、测评、案例、人物、报告、随笔等布局配方中选择宏观结构。单篇变化引擎会依据标题生成稳定签名，让同一主题下的每篇文章不完全相同。
 
 ---
