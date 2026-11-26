@@ -6,14 +6,16 @@
 
 ## 已注册主题
 
-| 主题 | 主色 | 适用场景 | 组件库文件 | 正文下划线 CSS |
-|------|------|---------|-----------|---------------|
-| 摸鱼绿 | `#059669` emerald | 教程、测评、清单、工具盘点（卡片丰富、信息密度高，默认推荐） | `references/theme-moyu-green.md` | `border-bottom:2px solid #A7F3D0;font-weight:600;` |
-| 红白色系 | `#DC2626` 正红 | 深度分析、观点、力量感话题（经典编辑风，编号章节+引言卡+签名区，红色克制点睛） | `references/theme-red-white.md` | `border-bottom:2px solid #FECACA;font-weight:600;` |
-| 石墨极简风 | `#52525B` 石墨灰 | 设计、科技评论、专业观点、高端品牌（极简克制、留白理性、全灰阶） | `references/theme-graphite-minimal.md` | `border-bottom:2px solid #52525B;font-weight:600;` |
-| 留白禅意风 | `#4A5D52` 墨绿 | 禅意冥想、极简生活、深度随笔、艺术留白（呼吸感最强） | `references/theme-zen-whitespace.md` | `border-bottom:1.5px solid #B5C8BC;font-weight:500;` |
-| 摸鱼票据风 | `#059669` emerald | 测评、工具对比、创意评测（票据/门票视觉隐喻，星级评分+编号+硬阴影卡片） | `references/theme-moyu-ticket.md` | `border-bottom:2px solid #A7F3D0;font-weight:600;` |
-| 橄榄手记 | `#1e1f23` 墨黑（配橙 `#ed7b2f`） | 内刊手记、深度评测、案例复盘、系统性说明文档（编辑部内刊质感，分节形式多样，信息密度偏高） | `references/theme-olive-journal.md` | `border-bottom:2px solid #ed7b2f;font-weight:600;` |
+| 主题 | 主色 | 适用场景 | 组件库文件 | 正文下划线 CSS | 预览 |
+|------|------|---------|-----------|---------------|------|
+| 摸鱼绿 | `#059669` emerald | 教程、测评、清单、工具盘点（卡片丰富、信息密度高，默认推荐） | `references/theme-moyu-green.md` | `border-bottom:2px solid #A7F3D0;font-weight:600;` | `assets/theme-moyu-green-preview.html` |
+| 红白色系 | `#DC2626` 正红 | 深度分析、观点、力量感话题（经典编辑风，编号章节+引言卡+签名区，红色克制点睛） | `references/theme-red-white.md` | `border-bottom:2px solid #FECACA;font-weight:600;` | `assets/theme-red-white-preview.html` |
+| 石墨极简风 | `#52525B` 石墨灰 | 设计、科技评论、专业观点、高端品牌（极简克制、留白理性、全灰阶） | `references/theme-graphite-minimal.md` | `border-bottom:2px solid #52525B;font-weight:600;` | `assets/theme-graphite-minimal-preview.html` |
+| 留白禅意风 | `#4A5D52` 墨绿 | 禅意冥想、极简生活、深度随笔、艺术留白（呼吸感最强） | `references/theme-zen-whitespace.md` | `border-bottom:1.5px solid #B5C8BC;font-weight:500;` | `assets/theme-zen-whitespace-preview.html` |
+| 摸鱼票据风 | `#059669` emerald | 测评、工具对比、创意评测（票据/门票视觉隐喻，星级评分+编号+硬阴影卡片） | `references/theme-moyu-ticket.md` | `border-bottom:2px solid #A7F3D0;font-weight:600;` | `assets/theme-moyu-ticket-preview.html` |
+| 橄榄手记 | `#1e1f23` 墨黑（配橙 `#ed7b2f`） | 内刊手记、深度评测、案例复盘、系统性说明文档（编辑部内刊质感，分节形式多样，信息密度偏高） | `references/theme-olive-journal.md` | `border-bottom:2px solid #ed7b2f;font-weight:600;` | `assets/theme-olive-journal-preview.html` |
+| ToolSoul 科技蓝 | `#2563EB` 科技蓝 | AI 工具、产品教程、功能测评、效率方法、科技观察（白底信息模块、步骤状态与轻科技感） | `references/theme-toolsoul-tech.md` | `border-bottom:2px solid #93C5FD;font-weight:600;` | `assets/theme-toolsoul-tech-preview.html` |
+| 数据简报 | `#0F172A` 海军蓝（配橙 `#D97706`） | 行业报告、商业分析、数据复盘、运营总结、市场观察（结论先行、指标、对照和来源） | `references/theme-data-brief.md` | `border-bottom:2px solid #FCD34D;font-weight:600;` | `assets/theme-data-brief-preview.html` |
 
 ## 选择建议
 

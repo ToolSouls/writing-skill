@@ -38,11 +38,28 @@
 
 - 支持 Markdown、Word（`.docx`）、PDF、纯文本和网页文本。
 - 自动识别文章结构并推荐主题。
-- 提供多套公众号主题组件库，支持章节编号、关键词标记、引言、目录、引用、代码块、图片和作者签名。
+- 内置 8 套公众号视觉主题，覆盖科技、数据、观点、教程、生活方式和案例复盘。
+- 按教程、观点、清单、测评、案例、人物、报告、随笔等文章类型选择不同布局配方。
+- 根据文章标题生成稳定的单篇布局变化，让同一主题下每篇文章也不完全相同。
 - 生成纯内联样式的微信兼容 HTML。
 - 自动补全 `<span leaf="">`，减少粘贴公众号后样式丢失。
 - 内置 HTML 合规校验、组件反模式检查和预览复制页面。
 - 支持按描述或参考图生成新的自定义主题。
+
+## 内置视觉主题
+
+| 主题 | 适合文章 | 预览 |
+| --- | --- | --- |
+| 摸鱼绿 | 教程、测评、清单、工具盘点 | [预览](./gzh-paiban-skill/assets/theme-moyu-green-preview.html) |
+| 红白色系 | 深度分析、观点、力量感话题 | [预览](./gzh-paiban-skill/assets/theme-red-white-preview.html) |
+| 石墨极简风 | 设计、科技评论、专业观点 | [预览](./gzh-paiban-skill/assets/theme-graphite-minimal-preview.html) |
+| 留白禅意风 | 禅意、极简生活、深度随笔 | [预览](./gzh-paiban-skill/assets/theme-zen-whitespace-preview.html) |
+| 摸鱼票据风 | 工具对比、创意测评 | [预览](./gzh-paiban-skill/assets/theme-moyu-ticket-preview.html) |
+| 橄榄手记 | 案例复盘、内刊手记、深度评测 | [预览](./gzh-paiban-skill/assets/theme-olive-journal-preview.html) |
+| ToolSoul 科技蓝 | AI 工具、教程、产品测评、科技观察 | [预览](./gzh-paiban-skill/assets/theme-toolsoul-tech-preview.html) |
+| 数据简报 | 行业报告、商业分析、数据复盘 | [预览](./gzh-paiban-skill/assets/theme-data-brief-preview.html) |
+
+除视觉主题外，排版 Skill 还会识别文章类型，并从教程、观点、清单、测评、案例、人物、报告、随笔等布局配方中选择宏观结构。单篇变化引擎会依据标题生成稳定签名，让同一主题下的每篇文章不完全相同。
 
 ---
 

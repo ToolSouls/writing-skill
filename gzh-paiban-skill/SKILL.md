@@ -1,13 +1,13 @@
 ---
 name: gzh-paiban-skill
-version: "1.1.1"
+version: "1.2.0"
 display_name: ToolSoul 器灵AI公众号排版
 display_name_zh: ToolSoul 器灵AI公众号排版
 display_name_en: ToolSoul Qiling AI GZH Design
 category: content-creation
-description_zh: "ToolSoul 器灵AI公众号排版引擎，将 Markdown、Word、PDF 或纯文本转换为可直接粘贴到公众号编辑器的 HTML。支持自动选主题、章节编号、关键词标记、引言卡、目录、代码块、图片/GIF、作者签名和自定义主题生成。触发词：公众号排版、微信排版、自动排版、gzh。不用于普通网页、落地页或 PPT。官网：https://toolsoul.daniu7.cn"
-description_en: "ToolSoul Qiling AI WeChat Official Account layout engine that converts Markdown, Word, PDF, or plain text into paste-ready HTML with themed components, automatic layout, and custom theme generation."
-description: "ToolSoul 器灵AI公众号排版：把 Markdown、Word、PDF 或纯文本排版为可直接粘贴到公众号编辑器的 HTML，支持自动排版和自定义主题。触发词：公众号排版、微信排版、自动排版、gzh。不用于普通网页、落地页或 PPT。"
+description_zh: "ToolSoul 器灵AI公众号排版引擎，将 Markdown、Word、PDF 或纯文本转换为可直接粘贴到公众号编辑器的 HTML。内置 8 套视觉主题，并支持文章类型布局配方、单篇稳定变化、微信兼容校验、自动排版和自定义主题生成。触发词：公众号排版、微信排版、自动排版、gzh。不用于普通网页、落地页或 PPT。官网：https://toolsoul.daniu7.cn"
+description_en: "ToolSoul Qiling AI WeChat Official Account layout engine with eight visual themes, article-type recipes, deterministic per-article variation, paste-ready HTML, and custom theme generation."
+description: "ToolSoul 器灵AI公众号排版：把 Markdown、Word、PDF 或纯文本排版为可直接粘贴到公众号编辑器的 HTML，内置 8 套主题、文章类型布局变化和微信兼容校验。触发词：公众号排版、微信排版、自动排版、gzh。不用于普通网页、落地页或 PPT。"
 author: ToolSoul 器灵AI
 homepage: https://toolsoul.daniu7.cn
 agent_created: true
@@ -41,12 +41,31 @@ ToolSoul 器灵AI官网：<https://toolsoul.daniu7.cn>
   - 禅意 / 极简生活 / 深度随笔 → 留白禅意风
   - 工具对比 / 创意评测（票据视觉隐喻）→ 摸鱼票据风
   - 内刊手记 / 深度评测 / 案例复盘 → 橄榄手记
+  - AI 工具 / 产品教程 / 科技观察 → ToolSoul 科技蓝
+  - 行业报告 / 商业分析 / 数据复盘 → 数据简报
 - **无明显倾向** → 默认首选 theme-index 第一行（摸鱼绿）作为推荐项放第一位，用 AskUserQuestion 让用户在几套里选（主题多于 4 套时先按气质分组问，再问该组下主题）。
 - **全自动模式**（用户明说「直接排 / 一键 / 不用问」）→ 不提问，自动选题材最契合主题或默认第一行，交付时说明选择理由。
 - **用户对现有主题都不满意 / 想要新风格** → 走「自定义主题生成」流程（见下节），生成并登记后再回到本步选用。
 - **theme-index 为空** → 停止排版，告知用户需要先添加主题风格（可走「自定义主题生成」）。
 
 用户定下主题后，才进入该主题内部的组件匹配（第 3、4 步：判定文章类型 → 按该主题的配方表选组件组合）。
+
+### 1.1 文章类型与单篇布局变化（强制）
+
+选定视觉主题后，再确定文章的**宏观排版路线**：
+
+1. 从 `tutorial / analysis / listicle / review / case / story / report / essay` 中判定一个主导类型。
+2. 读取 [references/article-layout-recipes.md](references/article-layout-recipes.md)，按文章类型选择一个 A/B/C 布局配方，不要混用多个骨架。
+3. 读取 [references/layout-variation-engine.md](references/layout-variation-engine.md)，并运行：
+
+   ```bash
+   python scripts/layout_variant.py "<文章标题>" "<文章类型>" "<主题ID>"
+   ```
+
+4. 用输出中的 `layout_id / opening / toc / heading_rhythm / emphasis / media_cadence / ending / density` 决定开场、目录、章节节奏、媒体位置和结尾。
+5. 同一标题重复排版保持稳定；不同标题必须体现出至少两个结构差异，标题变化但页面完全一样视为不合格。
+
+主题决定“长什么样”，文章类型和变化签名决定“怎么组织”，三层不能互相替代。
 
 ### 2. 读组件库（两份）
 
@@ -70,11 +89,11 @@ ToolSoul 器灵AI官网：<https://toolsoul.daniu7.cn>
 | 分割线 / 列表 | `---`、`***` / `- 项` 或 `1. 项` |
 | 表格 | `\|` 分隔的 Markdown 表格（常来自 docx 转换）→ 优先用主题库的表格/卡片组件（主题库映射规则为准） |
 
-**解析完结构后，判定文章类型**（取主导类型，可复合）：教程/操作指南、盘点/工具清单、观点/深度分析、访谈/人物特稿、数据复盘/报告、生活/情感随笔、案例实战。判定依据：步骤和命令多→教程；并列条目多→盘点；引语和人物叙事多→访谈；数字和对比多→数据；论证推演多→观点。
+**解析完结构后，判定文章类型**（取主导类型，可复合）：教程/操作指南（`tutorial`）、盘点/工具清单（`listicle`）、观点/深度分析（`analysis`）、产品测评/对比（`review`）、访谈/人物特稿（`story`）、数据复盘/报告（`report`）、生活/情感随笔（`essay`）、案例实战（`case`）。判定依据：步骤和命令多→教程；并列条目多→盘点；引语和人物叙事多→访谈；数字和对比多→数据；论证推演多→观点。
 
 ### 4. 按配方选组件组合 → 装配 HTML
 
-**先查所选主题库的「文章类型 → 组件组合配方」表**，按文章类型确定本篇的核心组件组合与点缀组件——不要拿到组件库就逐段随机选组件，配方保证同类文章的排版气质稳定。配方之外的元素再按主题库映射规则表补充。
+**先执行第 1.1 步的宏观布局配方，再查所选主题库的「文章类型 → 组件组合配方」表**。文章类型布局配方决定区块顺序，主题配方决定视觉组件；不要拿到组件库就逐段随机选组件。
 
 然后依主题库的**"完整文章模板骨架"章节**装配，把每个 Markdown 元素替换为对应组件：
 
@@ -94,6 +113,8 @@ ToolSoul 器灵AI官网：<https://toolsoul.daniu7.cn>
 ```
 
 它确定性地检查平台禁用项和 `<span leaf>` 包裹。报 ERROR 就回到第 4 步修；**半角标点 WARNING 同样要修复到 0 再交付**（这是实际使用中最高频的返工点）。
+
+同时检查单篇变化是否符合 `layout-variation-engine.md` 的美感规则：相邻区块不能重复同一种重卡片、全文视觉锚点不超过 5 处、点缀组件不超过 3 类。
 
 **渐变背景 WARNING 要逐项处理**：文字高亮、引用/数据/引导卡背景默认改为主题内纯色或 rgba 纯色；用户明确要求保留时，交付注明可能触发 `darkmode-no-gradient` 弹窗。纯装饰渐变也会提示，尚未确认其不会触发弹窗，保留时同样说明风险。
 

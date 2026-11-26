@@ -1,0 +1,166 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>公众号排版组件库 —— 摸鱼票据风</title>
+<style>
+body{margin:0;padding:32px;background:#eef2f7;color:#1f2937;font-family:"Microsoft YaHei",sans-serif}
+main{max-width:760px;margin:0 auto}
+h1{font-size:24px;margin:0 0 24px}
+.preview-item{margin:0 0 28px}
+.preview-label{margin:0 0 8px;font-size:12px;color:#64748b}
+.preview-canvas{padding:22px;background:#fff;border-radius:12px;box-shadow:0 6px 24px rgba(15,23,42,.08)}
+</style>
+</head>
+<body><main><h1>公众号排版组件库 —— 摸鱼票据风</h1><section class="preview-item"><p class="preview-label">组件 1 全局容器</p><div class="preview-canvas"><section style="max-width:677px;margin:0 auto;background:#ffffff;font-family:-apple-system,BlinkMacSystemFont,'PingFang SC','Hiragino Sans GB','Microsoft YaHei',sans-serif;color:#374151;line-height:1.75;letter-spacing:0.5px;">
+
+  <!-- 所有组件放在这里 -->
+
+</section></div></section><section class="preview-item"><p class="preview-label">组件 2 票据封面 ticket-cover</p><div class="preview-canvas"><section style="background:#fffef8;border:2px solid #1a1a1a;box-shadow:4px 4px 0 #1a1a1a;margin-bottom:32px;">
+  <section style="background:#059669;padding:12px 20px;display:flex;justify-content:space-between;align-items:center;">
+    <section style="color:#fffef8;font-size:11px;letter-spacing:4px;font-weight:600;"><span leaf="">{{头部标签}}</span></section>
+    <section style="color:#fffef8;font-size:11px;letter-spacing:2px;"><span leaf="">★★★★★</span></section>
+  </section>
+  <section style="display:flex;">
+    <section style="flex:1;padding:24px 20px;border-right:2px dashed #A7F3D0;">
+      <section style="font-size:24px;font-weight:900;color:#1a1a1a;letter-spacing:0.5px;margin-bottom:4px;text-shadow:0.5px 0 0 #1a1a1a;"><span leaf="">{{大标题}}</span></section>
+      <section style="font-size:14px;color:#666;letter-spacing:1px;margin-bottom:20px;"><span leaf="">{{副标题}}</span></section>
+      <section style="border-top:1px dashed #A7F3D0;margin-bottom:16px;"><span leaf=""><br></span></section>
+      <section style="display:flex;align-items:center;gap:12px;margin-bottom:16px;">
+        <!-- 有作者头像图时插入 <img> 到下面这个圆框里；无头像时整块删除该 section -->
+        <section style="width:48px;height:48px;border-radius:50%;overflow:hidden;border:2px solid #059669;flex-shrink:0;"><span leaf=""><br></span></section>
+        <section>
+          <section style="font-size:15px;color:#1a1a1a;font-weight:700;"><span leaf="">{{作者名}}</span></section>
+          <section style="font-size:12px;color:#888;"><span leaf="">{{作者身份}}</span></section>
+        </section>
+      </section>
+      <section style="font-size:13px;color:#555;line-height:1.8;padding:12px;background:#F0FDF4;border:1px solid #A7F3D0;">
+        <span leaf="">{{简介段落}}</span>
+      </section>
+      <section style="display:flex;gap:8px;margin-top:16px;">
+        <section style="font-size:10px;color:#059669;border:1px solid #059669;padding:4px 10px;"><span leaf="">{{#标签1}}</span></section>
+        <section style="font-size:10px;color:#059669;border:1px solid #059669;padding:4px 10px;"><span leaf="">{{#标签2}}</span></section>
+        <section style="font-size:10px;color:#059669;border:1px solid #059669;padding:4px 10px;"><span leaf="">{{#标签3}}</span></section>
+      </section>
+    </section>
+    <section style="width:48px;padding:14px 4px;display:flex;flex-direction:column;align-items:center;justify-content:space-between;background:#F0FDF4;">
+      <section style="text-align:center;">
+        <section style="font-size:7px;color:#999;letter-spacing:1px;"><span leaf="">NO.</span></section>
+        <section style="font-size:18px;font-weight:900;color:#059669;"><span leaf="">{{编号}}</span></section>
+      </section>
+      <section style="writing-mode:vertical-rl;font-size:9px;color:#888;letter-spacing:2px;"><span leaf="">{{竖排文字}}</span></section>
+      <section style="text-align:center;">
+        <section style="font-size:7px;color:#999;letter-spacing:1px;"><span leaf="">GRADE</span></section>
+        <section style="font-size:14px;font-weight:900;color:#059669;"><span leaf="">{{等级}}</span></section>
+      </section>
+    </section>
+  </section>
+  <section style="display:flex;justify-content:space-between;align-items:center;padding:0 8px;">
+    <section style="flex:1;border-top:2px dashed #A7F3D0;"><span leaf=""><br></span></section>
+    <section style="padding:0 8px;font-size:10px;color:#A7F3D0;"><span leaf="">✂</span></section>
+    <section style="flex:1;border-top:2px dashed #A7F3D0;"><span leaf=""><br></span></section>
+  </section>
+  <section style="padding:10px 20px;display:flex;justify-content:space-between;align-items:center;">
+    <section style="font-size:10px;color:#999;letter-spacing:1px;"><span leaf="">VALID FOR ONE READ</span></section>
+    <section style="font-size:10px;color:#999;letter-spacing:1px;"><span leaf="">ADMIT ONE 🎫</span></section>
+  </section>
+</section></div></section><section class="preview-item"><p class="preview-label">组件 3 章节标题 chapter-title</p><div class="preview-canvas"><section style="margin-bottom:32px;padding:0 20px;">
+  <section style="display:flex;align-items:center;gap:12px;margin-bottom:24px;padding-bottom:12px;border-bottom:2px solid #1a1a1a;">
+    <section style="background:#059669;color:#fff;font-size:12px;font-weight:800;padding:6px 12px;letter-spacing:2px;"><span leaf="">{{编号}}</span></section>
+    <section style="font-size:18px;font-weight:800;color:#1a1a1a;letter-spacing:1px;"><span leaf="">{{标题}}</span></section>
+    <section style="font-size:12px;color:#888;"><span leaf="">/ {{副标题}}</span></section>
+  </section>
+
+  <!-- 本章节正文内容放在这里 -->
+
+</section></div></section><section class="preview-item"><p class="preview-label">组件 4 小节标题 subtitle</p><div class="preview-canvas"><section style="margin-bottom:32px;padding:0 20px;">
+  <section style="display:flex;align-items:center;gap:8px;margin-bottom:16px;">
+    <section style="width:4px;height:16px;background:#059669;"><span leaf=""><br></span></section>
+    <section style="font-size:15px;font-weight:700;color:#1a1a1a;"><span leaf="">{{小节标题}}</span></section>
+  </section>
+</section></div></section><section class="preview-item"><p class="preview-label">组件 5 正文段落 paragraph</p><div class="preview-canvas"><section style="margin-bottom:32px;padding:0 20px;">
+  <p style="font-size:14px;color:#555;line-height:1.9;margin-bottom:16px;text-align:justify;">
+    <span leaf="">{{正文内容}}</span>
+  </p>
+</section></div></section><section class="preview-item"><p class="preview-label">组件 6 文字强调（5 种子样式）</p><div class="preview-canvas"><span style="color:#059669;font-weight:700;"><span leaf="">{{文字}}</span></span></div></section><section class="preview-item"><p class="preview-label">6a. 绿色加粗 —— 产品名/工具名</p><div class="preview-canvas"><span style="color:#059669;font-weight:700;"><span leaf="">{{文字}}</span></span></div></section><section class="preview-item"><p class="preview-label">6b. 绿色高亮 —— 核心观点/关键数据</p><div class="preview-canvas"><span style="background:#A7F3D0;padding:0 4px;font-weight:600;color:#111;"><span leaf="">{{文字}}</span></span></div></section><section class="preview-item"><p class="preview-label">6c. 绿色下划线 —— 重要短语（正文关键词的默认标记）</p><div class="preview-canvas"><span style="border-bottom:2px solid #A7F3D0;font-weight:600;"><span leaf="">{{文字}}</span></span></div></section><section class="preview-item"><p class="preview-label">6d. 代码标签 —— 技术名词/模型名/命令</p><div class="preview-canvas"><span style="background:#F3F4F6;color:#1F2937;padding:2px 6px;border-radius:4px;font-size:13px;font-weight:600;"><span leaf="">{{文字}}</span></span></div></section><section class="preview-item"><p class="preview-label">6e. 品牌紫色 —— 器灵AI等 AI 产品名专用</p><div class="preview-canvas"><span style="color:#7C3AED;font-weight:700;"><span leaf="">{{文字}}</span></span></div></section><section class="preview-item"><p class="preview-label">组件 7 Case 标题 case-title</p><div class="preview-canvas"><section style="margin-bottom:32px;padding:0 20px;">
+  <p style="font-size:13px;color:#1a1a1a;font-weight:600;margin-bottom:0;">
+    <span leaf="">case{{case编号}}: {{案例名称}}</span>
+  </p>
+</section></div></section><section class="preview-item"><p class="preview-label">组件 8 图片容器 image-ticket</p><div class="preview-canvas"><section style="margin-bottom:32px;padding:0 20px;">
+  <section style="background:#fffef8;border:1px solid #eee;padding:6px;margin-bottom:0;">
+    <figure style="margin:0;">
+      <span leaf=""><img src="{{图片URL}}" style="max-width:100%;height:auto;display:block;margin:0 auto;"></span>
+    </figure>
+  </section>
+</section></div></section><section class="preview-item"><p class="preview-label">组件 9 结论卡片 conclusion-card</p><div class="preview-canvas"><section style="margin-bottom:32px;padding:0 20px;">
+  <section style="background:#F0FDF4;border-left:4px solid #059669;padding:14px 16px;margin-bottom:0;">
+    <p style="font-size:14px;color:#1a1a1a;font-weight:600;line-height:1.7;margin:0;">
+      <span leaf="">{{前缀}}</span>
+      <span style="color:#059669;"><span leaf="">{{结论内容}}</span></span>
+    </p>
+  </section>
+</section></div></section><section class="preview-item"><p class="preview-label">组件 10 编号特点列表 numbered-feature-list</p><div class="preview-canvas"><section style="margin-bottom:32px;padding:0 20px;">
+  <section style="background:#fffef8;border:1px solid #eee;margin-bottom:12px;">
+    <section style="display:flex;align-items:stretch;">
+      <section style="width:36px;background:#059669;display:flex;align-items:center;justify-content:center;color:#fff;font-size:12px;font-weight:800;"><span leaf="">{{序号}}</span></section>
+      <section style="flex:1;padding:12px 16px;font-size:13px;color:#555;line-height:1.7;border-left:1px dashed #A7F3D0;">
+        <span style="font-weight:600;color:#1a1a1a;"><span leaf="">{{小标题}}</span></span>
+        <span leaf="">：{{描述}}</span>
+      </section>
+    </section>
+  </section>
+</section></div></section><section class="preview-item"><p class="preview-label">组件 11 核心观点卡片 key-point-card</p><div class="preview-canvas"><section style="margin-bottom:32px;padding:0 20px;">
+  <section style="background:#fffef8;border:2px solid #1a1a1a;box-shadow:3px 3px 0 #1a1a1a;padding:20px;margin-bottom:0;">
+    <p style="font-size:15px;color:#1a1a1a;font-weight:700;line-height:1.8;margin:0 0 12px;text-align:center;">
+      <span leaf="">{{金句前半}}</span>
+      <span style="color:#059669;font-size:24px;"><span leaf="">{{大数字}}</span></span>
+      <span leaf="">{{金句后半}}</span>
+    </p>
+    <p style="font-size:14px;color:#555;line-height:1.8;margin:0;text-align:justify;">
+      <span leaf="">{{补充说明}}</span>
+    </p>
+  </section>
+</section></div></section><section class="preview-item"><p class="preview-label">组件 12 标签组 tag-group</p><div class="preview-canvas"><section style="margin-bottom:32px;padding:0 20px;">
+  <section style="display:flex;gap:8px;flex-wrap:wrap;">
+    <section style="font-size:10px;color:#059669;border:1px solid #059669;padding:4px 10px;"><span leaf="">{{#标签1}}</span></section>
+    <section style="font-size:10px;color:#059669;border:1px solid #059669;padding:4px 10px;"><span leaf="">{{#标签2}}</span></section>
+    <section style="font-size:10px;color:#059669;border:1px solid #059669;padding:4px 10px;"><span leaf="">{{#标签3}}</span></section>
+  </section>
+</section></div></section><section class="preview-item"><p class="preview-label">组件 13 结尾互动区 footer-cta（本主题的签名/CTA 区）</p><div class="preview-canvas"><section style="padding:0 0 32px;">
+  <section style="background:#fffef8;border:2px solid #1a1a1a;box-shadow:4px 4px 0 #1a1a1a;padding:24px 20px;text-align:center;">
+    <p style="font-size:13px;font-weight:700;color:#1a1a1a;margin:0 0 20px;line-height:1.6;">
+      <span leaf="">{{互动文案}}</span>
+    </p>
+    <section style="display:flex;justify-content:center;gap:24px;margin-bottom:16px;">
+      <section style="text-align:center;color:#555;">
+        <section style="width:40px;height:40px;display:flex;align-items:center;justify-content:center;margin:0 auto 6px;background:#fff;border:1px solid #1a1a1a;">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M14 9V5a3 3 0 0 0-3-3l-4 9v11h11.28a2 2 0 0 0 2-1.7l1.38-9a2 2 0 0 0-2-2.3zM7 22H4a2 2 0 0 1-2-2v-7a2 2 0 0 1 2-2h3"></path></svg>
+        </section>
+        <span style="font-size:10px;font-weight:600;"><span leaf="">点赞</span></span>
+      </section>
+      <section style="text-align:center;color:#555;">
+        <section style="width:40px;height:40px;display:flex;align-items:center;justify-content:center;margin:0 auto 6px;background:#fff;border:1px solid #1a1a1a;">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="3"></circle><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path></svg>
+        </section>
+        <span style="font-size:10px;font-weight:600;"><span leaf="">在看</span></span>
+      </section>
+      <section style="text-align:center;color:#059669;">
+        <section style="width:40px;height:40px;display:flex;align-items:center;justify-content:center;margin:0 auto 6px;background:#F0FDF4;border:2px solid #059669;">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+        </section>
+        <span style="font-size:10px;font-weight:600;"><span leaf="">星标</span></span>
+      </section>
+    </section>
+    <section style="border-top:1px dashed #ccc;padding-top:12px;">
+      <p style="font-size:10px;color:#999;letter-spacing:2px;margin:0;">
+        <span leaf="">THANKS FOR READING ✂</span>
+      </p>
+    </section>
+  </section>
+</section></div></section><section class="preview-item"><p class="preview-label">组件 14 结束符 end-mark</p><div class="preview-canvas"><p style="text-align:center;color:#D1D5DB;font-size:14px;margin:24px 0 0 0;">
+  <span leaf="">/</span>
+</p></div></section><section class="preview-item"><p class="preview-label">组件 15 隐藏标记 hidden-mark</p><div class="preview-canvas"><p style="display:none;">
+  <mp-style-type data-value="3"></mp-style-type>
+</p></div></section></main></body>
+</html>
