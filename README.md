@@ -60,6 +60,8 @@
 | 数据简报 | 行业报告、商业分析、数据复盘 | [预览](./gzh-paiban-skill/assets/theme-data-brief-preview.html) |
 
 > GitHub 文件页不会执行仓库内的 HTML，点击 HTML 链接会看到源码。下载后用浏览器打开可查看完整滚动预览；下面提供直接可看的渲染图。
+>
+> `theme-*-preview.html` 只是浏览器预览外壳，包含 `<style>`、`div` 和预览用 `class`，**不要直接全选复制到公众号编辑器**。真正发布时由 Skill 输出纯 `<section>` 正文片段，并运行 `validate_gzh_html.py`。
 
 ### ToolSoul 科技蓝
 
